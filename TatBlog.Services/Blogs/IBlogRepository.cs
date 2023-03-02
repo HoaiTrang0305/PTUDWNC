@@ -35,5 +35,15 @@ namespace TatBlog.Services.Blogs
             CancellationToken cancellationToken = default);
         Task<IPagedList<TagItem>> GetPagedTagsAsync(
         IPagingParams pagingParams, CancellationToken cancellationToken = default);
+
+        /*Task<Tag> GetTag(string slug,
+            CancellationToken cancellationToken = default);*/
+
+
+        //Lấy danh sách tất cả các thẻ (Tag) kèm theo số bài viết chứa thẻ đó. Kết
+        //quả trả về kiểu IList<TagItem>
+        Task<IList<TagItem>> GetTags(CancellationToken cancellationToken = default);
+
+
     }
 }

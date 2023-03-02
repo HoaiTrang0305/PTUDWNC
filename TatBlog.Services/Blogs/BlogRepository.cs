@@ -118,5 +118,31 @@ namespace TatBlog.Services.Blogs
                     return await tagQuery
                         .ToPagedListAsync(pagingParams, cancellationToken);
                 }
+        /*public Task<Tag> GetTag(string slug,
+            CancellationToken cancellationToken = default)
+        {
+            return _context.Set<Tag>()
+                .Where(x=>x.UrlSlug == slug)
+                .FirstOrDefaultAsync(cancellationToken);
+        }*/
+
+        //Lấy danh sách tất cả các thẻ (Tag) kèm theo số bài viết chứa thẻ đó. Kết
+        //quả trả về kiểu IList<TagItem>
+
+        public async Task<IList<TagItem>> GetTags(CancellationToken cancellationToken = default)
+        {
+            IQueryable<Tag> tags = _context.Set<Tag>();
+            return await tags.OrderBy(x => x.Name)
+                .Select (x => new TagItem() 
+                { 
+                    Id=x.Id,
+                    Name=x.Name,
+                    UrlSlug=x.UrlSlug,
+                    Description=x.Decsription,
+                    PostCount=x.Posts.Count(p => p.Published)
+                })
+                .ToListAsync(cancellationToken);
+        }
+
     }
 }

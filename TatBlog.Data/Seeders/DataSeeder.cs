@@ -45,6 +45,27 @@ namespace TatBlog.Data.Seeders
                     UrlSlug="jesscia-wonder",
                     Email="jessica665@motip.com",
                     JoinedDate=new DateTime(2020,4,19)
+                },
+                new ()
+                {
+                    FullName="Harry Potter",
+                    UrlSlug="harry-potter",
+                    Email="harry@motip.com",
+                    JoinedDate=new DateTime(2021,4,20)
+                },
+                new ()
+                {
+                    FullName="Tom",
+                    UrlSlug="tom",
+                    Email="tom11@motip.com",
+                    JoinedDate=new DateTime(2021,9,17)
+                },
+                new ()
+                {
+                    FullName="Jerry",
+                    UrlSlug="jerry",
+                    Email="jerry5@motip.com",
+                    JoinedDate=new DateTime(2020,12,15)
                 }
             };
             _dbContext.Author.AddRange(authors);
@@ -70,9 +91,11 @@ namespace TatBlog.Data.Seeders
         {
             var tags = new List<Tag>()
            {
-               new() {Name="Google",Decsription="Google appication",UrlSlug="",Posts=new List<Post>(){ } }
-
-
+               new() {Name="Google",Decsription="Google appication",UrlSlug="Google",Posts=new List<Post>(){ } },
+               new() {Name="MongoDB",Decsription="MongoDB",UrlSlug="MongoDB",Posts=new List<Post>(){ } },
+               new() {Name="Neurul Network",Decsription="Neurul Network",UrlSlug="",Posts=new List<Post>(){ } },
+               new() {Name="Razor page",Decsription="Razor page",UrlSlug="",Posts=new List<Post>(){ } },
+               new() {Name="Tailwind CSS",Decsription="Tailwind CSS",UrlSlug="",Posts=new List<Post>(){ } },
            };
             _dbContext.AddRange(tags);
             _dbContext.SaveChanges();
