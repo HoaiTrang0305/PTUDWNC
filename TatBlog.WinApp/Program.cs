@@ -10,7 +10,7 @@ using TatBlog.WinApp;
 // Tạo đối tượng DbContext để quản lý phiền làm việc 
 // với CSDL và trạng thái của các đối tượng
 
-var context = new BlogDbContext();
+//var context = new BlogDbContext();
 
 
 /*
@@ -64,7 +64,7 @@ foreach (var post in posts)
     Console.WriteLine("Category:{0}", post.Category);
     Console.WriteLine("".PadRight(80, '-'));
 }*/
-IBlogRepository blogRepo = new BlogRepository(context);
+/*IBlogRepository blogRepo = new BlogRepository(context);
 var posts = await blogRepo.GetPopularArticlesAsync(3);
 foreach (var post in posts)
 {
@@ -75,9 +75,9 @@ foreach (var post in posts)
     Console.WriteLine("Author     : {0}", post.Author.FullName);
     Console.WriteLine("Category   : {0}", post.Category.Name);
     Console.WriteLine("".PadRight(80, '-'));
-}
+}*/
 
-var categories = await blogRepo.GetCategoryAsync();
+/*var categories = await blogRepo.GetCategoryAsync();
 Console.WriteLine("{0,-5}{1,-50}{2,10}", "ID", "Name", "Count");
 foreach (var item in categories)
 {
@@ -104,7 +104,7 @@ foreach (var item in tagsList)
     Console.WriteLine("{0,-5} {1,-50} {2,10}", 
         item.Id, item.Name, item.PostCount);
 }
-
+*/
 //Tìm một thẻ tag theo tên định danh
 /*string slug = "Google";
 var tag=await blogRepo.GetTag(slug);
@@ -114,10 +114,10 @@ Console.WriteLine("{0,-5}{1,-20}{2,-20}", tag.Id, tag.Name, tag.Decsription);
 
 //Lấy danh sách tất cả các thẻ (Tag) kèm theo số bài viết chứa thẻ đó. Kết
 //quả trả về kiểu IList<TagItem>
-var tags = await blogRepo.GetTags();
+/*var tags = await blogRepo.GetTags();
 Console.WriteLine("{0,-5}{1,-50}{2,10}", "ID", "Name", "Count");
 foreach(var item in tags)
 {
     Console.WriteLine("{0,-5}{1,-50}{2,10}", item.Id, item.Name, item.PostCount);
 
-}
+}*/
