@@ -1,3 +1,11 @@
+D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\TatBlog.WebApp.csproj.AssemblyReference.cache
+D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\TatBlog.WebApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\TatBlog.WebApp.AssemblyInfoInputs.cache
+D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\TatBlog.WebApp.AssemblyInfo.cs
+D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\TatBlog.WebApp.csproj.CoreCompileInputs.cache
+D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\TatBlog.WebApp.MvcApplicationPartsAssemblyInfo.cache
+D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\TatBlog.WebApp.RazorAssemblyInfo.cache
+D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\TatBlog.WebApp.RazorAssemblyInfo.cs
 D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\bin\Debug\net7.0\appsettings.Development.json
 D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\bin\Debug\net7.0\appsettings.json
 D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\bin\Debug\net7.0\libman.json
@@ -52,14 +60,6 @@ D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\bin\Debug\net7.0\TatBlog.Services.dll
 D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\bin\Debug\net7.0\TatBlog.Core.pdb
 D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\bin\Debug\net7.0\TatBlog.Data.pdb
 D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\bin\Debug\net7.0\TatBlog.Services.pdb
-D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\TatBlog.WebApp.csproj.AssemblyReference.cache
-D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\TatBlog.WebApp.GeneratedMSBuildEditorConfig.editorconfig
-D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\TatBlog.WebApp.AssemblyInfoInputs.cache
-D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\TatBlog.WebApp.AssemblyInfo.cs
-D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\TatBlog.WebApp.csproj.CoreCompileInputs.cache
-D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\TatBlog.WebApp.MvcApplicationPartsAssemblyInfo.cache
-D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\TatBlog.WebApp.RazorAssemblyInfo.cache
-D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\TatBlog.WebApp.RazorAssemblyInfo.cs
 D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\staticwebassets\msbuild.TatBlog.WebApp.Microsoft.AspNetCore.StaticWebAssets.props
 D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\staticwebassets\msbuild.build.TatBlog.WebApp.props
 D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.TatBlog.WebApp.props

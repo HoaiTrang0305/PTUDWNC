@@ -1,0 +1,9 @@
+﻿@model IList<Tag>
+@foreach (var item in Model)
+{
+	<a asp-asp-controller="=Blog"
+	asp-action="Tag"
+	asp-route-slug="@item.UrlSlug"
+	title="Tag: @item.Name"
+	class="btn btn-sm btn-outline-secondary"></a>
+}

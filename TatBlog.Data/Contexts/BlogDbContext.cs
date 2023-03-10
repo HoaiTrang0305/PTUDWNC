@@ -18,13 +18,14 @@ namespace TatBlog.Data.Contexts
         public DbSet<Post> Post { get; set; }
 
         public DbSet<Tag> Tags { get; set; }
+        public BlogDbContext(DbContextOptions<BlogDbContext> options) : base(options) { }
 
-        protected override void OnConfiguring(
+        /*protected override void OnConfiguring(
             DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=MSI\HOAITRANG;Database=TatBlog;
             Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=false");
-        }
+        }*/
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

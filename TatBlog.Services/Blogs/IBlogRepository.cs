@@ -43,7 +43,12 @@ namespace TatBlog.Services.Blogs
         //Lấy danh sách tất cả các thẻ (Tag) kèm theo số bài viết chứa thẻ đó. Kết
         //quả trả về kiểu IList<TagItem>
         Task<IList<TagItem>> GetTags(CancellationToken cancellationToken = default);
+        Task<IPagedList<Post>> GetPagedPostsAsync(
+        PostQuery condition,
+        int pageNumber = 1,
+        int pageSize = 10,
+        CancellationToken cancellationToken = default);
 
 
-    }
+	}
 }
