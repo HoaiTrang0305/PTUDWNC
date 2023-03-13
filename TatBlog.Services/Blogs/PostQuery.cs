@@ -8,14 +8,16 @@ namespace TatBlog.Services.Blogs
 {
 	public class PostQuery
 	{
-		public int AuthorId { get; set; } = -1;
-		public int CategoryId { get; set; } = -1;
-		public string CategorySlug { get; set; } = "";
-		public string AuthorSlug { get; set; } = "";
-		public string TagSlug { get; set; } = "";
-		public int Year { get; set; } = -1;
-		public int Month { get; set; } = -1;
-		public bool PublishedOnly { get; set; } = true;
-		public string Keyword { get; set; } = "";
+		public int AuthorId { get; set; } 
+		public int CategoryId { get; set; } 
+		public string CategorySlug { get; set; } 
+		public string AuthorSlug { get; set; } 
+		public string TagSlug { get; set; } 
+		public string TitleSlug { get; set; }
+		public int Year { get; set; } 
+		public int Month { get; set; } 
+		public bool PublishedOnly { get; set; } 
+		public bool NotPublished { get; set; } 
+		public string Keyword { get; set; } 
 	}
 }

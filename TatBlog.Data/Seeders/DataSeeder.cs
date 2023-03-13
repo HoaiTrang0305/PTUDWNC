@@ -113,7 +113,7 @@ namespace TatBlog.Data.Seeders
                 new()
                 {
                     Title = "ASP.NET Core Diagnostic Scenarios",
-                    ShortDesciption = "David and friends has a great repos ",
+                    ShortDescription= "David and friends has a great repos ",
                     Decsription = "Here's a few great DON'T and DO examples ",
                     Meta = "David and friends has a great repository filled ",
                     UrlSlug = "aspnet - core - diagnostic - scenarios",

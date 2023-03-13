@@ -1,7 +1,7 @@
 ﻿@model Post
 @{
 	var imageUrl = string.IsNullOrWhiteSpace(Model.ImageUrl)
-			? "/image/image1.jpg"
+			? "/images/image1.jpg"
 			: $"/{Model.ImageUrl}";
 }
 <article class="blog-entry mb-4">
@@ -22,7 +22,9 @@
 							Tác giả:
 						</small>
 						<span class="text-primary">
-							@Model.Author.FullName
+							<a href="@Url.Action("author","blog",new{slug = @Model.Author.UrlSlug})">
+								@Model.Author.FullName
+							</a>
 						</span>
 						<small class="text-muted">
 							Chủ đề:
@@ -32,7 +34,7 @@
 						</span>
 					</p>
 					<p class="card-text">
-						@Html.Raw(Model.ShortDesciption)
+						@Html.Raw(Model.ShortDescription)
 					</p>
 					<div class="tag-list">
 						<partial name="_TagList" model="@Model.Tags"/>

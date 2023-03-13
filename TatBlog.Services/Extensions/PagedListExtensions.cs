@@ -48,7 +48,7 @@ namespace TatBlog.Services.Extensions
         {
             var totalCount = await source.CountAsync(cancellationToken);
             var items = await source
-                .OrderBy($"{sortColumn}{sortOrder}")
+                .OrderBy($"{sortColumn} {sortOrder}")
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync(cancellationToken);

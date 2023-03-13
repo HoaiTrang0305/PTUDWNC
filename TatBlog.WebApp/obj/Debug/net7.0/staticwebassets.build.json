@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sbK1W42/wDeFomRkHZptZAuSRleBLo6IaquaeBpFbkU=",
+  "Hash": "r0I1kcZd7Os9HhQJ/+QzQckE+nB7XdyCylm0HvbzZk0=",
   "Source": "TatBlog.WebApp",
   "BasePath": "_content/TatBlog.WebApp",
   "Mode": "Default",
@@ -32,6 +32,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\main.css"
+    },
+    {
+      "Identity": "D:\\PTUDW(NC)\\TipsAndTricks\\TatBlog.WebApp\\wwwroot\\images\\image1.jpg",
+      "SourceId": "TatBlog.WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PTUDW(NC)\\TipsAndTricks\\TatBlog.WebApp\\wwwroot\\",
+      "BasePath": "_content/TatBlog.WebApp",
+      "RelativePath": "images/image1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\image1.jpg"
     },
     {
       "Identity": "D:\\PTUDW(NC)\\TipsAndTricks\\TatBlog.WebApp\\wwwroot\\js\\main.js",

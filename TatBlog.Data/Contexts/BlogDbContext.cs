@@ -24,7 +24,7 @@ namespace TatBlog.Data.Contexts
             DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=MSI\HOAITRANG;Database=TatBlog;
-            Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=false");
+            Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=false;");
         }*/
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

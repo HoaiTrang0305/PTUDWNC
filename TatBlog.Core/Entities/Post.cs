@@ -11,7 +11,7 @@ namespace TatBlog.Core.Entities
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public string ShortDesciption { get; set; }
+        public string ShortDescription { get; set; }
         public string Decsription { get; set; }
         public string Meta { get; set; }
         public string UrlSlug { get; set; }
@@ -26,6 +26,5 @@ namespace TatBlog.Core.Entities
         public Category Category { get; set; }
         public Author Author { get; set; }
         public IList<Tag> Tags { get; set; }
-		public object ShortDescription { get; set; }
 	}
 }
