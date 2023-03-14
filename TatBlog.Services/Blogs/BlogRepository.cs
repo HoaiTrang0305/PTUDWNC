@@ -213,6 +213,11 @@ namespace TatBlog.Services.Blogs
 
 			
 		}
+		public async Task<Author> GetAuthorAsync(string slug, CancellationToken cancellationToken = default)
+		{
+			return await _context.Set<Author>()
+				.FirstOrDefaultAsync(a => a.UrlSlug == slug, cancellationToken);
+		}
 
 		public async Task<IPagedList<Post>> GetPagedPostsAsync(
 		PostQuery condition,

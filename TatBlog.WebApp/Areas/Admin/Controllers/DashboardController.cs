@@ -2,7 +2,11 @@
 
 namespace TatBlog.WebApp.Areas.Admin.Controllers
 {
-	public class DashboardController
+	public class DashboardController: Controller
 	{
+		public  IActionResult Index() 
+		{
+			return View();
+		}
 	}
 }
