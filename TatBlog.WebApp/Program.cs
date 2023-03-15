@@ -4,13 +4,15 @@ using TatBlog.Data.Contexts;
 using TatBlog.Data.Seeders;
 using TatBlog.Services.Blogs;
 using TatBlog.WebApp.Mapsters;
+using TatBlog.WebApp.Validations;
 
 var buider = WebApplication.CreateBuilder(args);
 {
 	buider
 		.ConfigureMvc()
 		.ConfigureServices()
-		.ConfigureMapster();
+		.ConfigureMapster()
+		.ConfigureFluentValidation();
 }
 
 var app = buider.Build();

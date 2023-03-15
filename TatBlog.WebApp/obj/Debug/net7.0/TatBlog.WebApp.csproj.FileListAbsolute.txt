@@ -280,3 +280,4 @@ D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\bin\Debug\net7.0\Mapster.DependencyInj
 D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\bin\Debug\net7.0\xunit.abstractions.dll
 D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\bin\Debug\net7.0\xunit.core.dll
 D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\bin\Debug\net7.0\xunit.execution.dotnet.dll
+D:\PTUDW(NC)\TipsAndTricks\TatBlog.WebApp\obj\Debug\net7.0\TatBlog.WebApp.MvcApplicationPartsAssemblyInfo.cs

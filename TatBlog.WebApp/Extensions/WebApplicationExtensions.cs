@@ -2,6 +2,7 @@
 using TatBlog.Data.Contexts;
 using TatBlog.Data.Seeders;
 using TatBlog.Services.Blogs;
+using TatBlog.Services.Media;
 
 namespace TatBlog.WebApp.Extensions
 {
@@ -15,10 +16,15 @@ namespace TatBlog.WebApp.Extensions
 			return builder;
 		}
 
-		public static WebApplicationBuilder ConfigureServices(this WebApplicationBuilder builder)
+		public static WebApplicationBuilder ConfigureServices(
+			this WebApplicationBuilder builder)
 		{
-			builder.Services.AddDbContext<BlogDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+			builder.Services.AddDbContext<BlogDbContext>(options => 
+			options.UseSqlServer(
+				builder.Configuration
+				.GetConnectionString("DefaultConnection")));
 
+			builder.Services.AddScoped<IMediaManager,LocalFileSystemMediaManager>();
 			builder.Services.AddScoped<IBlogRepository, BlogRepository>();
 			builder.Services.AddScoped<IDataSeeder, DataSeeder>();
 
