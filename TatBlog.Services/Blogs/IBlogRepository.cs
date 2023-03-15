@@ -44,13 +44,31 @@ namespace TatBlog.Services.Blogs
         //quả trả về kiểu IList<TagItem>
         Task<IList<TagItem>> GetTags(CancellationToken cancellationToken = default);
 
-		Task<IList<Author>> GetAuthorAsync(string slug, CancellationToken cancellationToken = default);
 
 		Task<IPagedList<Post>> GetPagedPostsAsync(
         PostQuery condition,
         int pageNumber = 1,
         int pageSize = 1,
         CancellationToken cancellationToken = default);
-		
+
+        Task<IList<AuthorItem>> GetAuthorsAsync(CancellationToken cancellationToken = default);
+
+        Task<IList<CategoryItem>> GetCategoriesAsync(
+        bool showOnMenu = false,
+        CancellationToken cancellationToken = default);
+
+        Task<Post> GetPostByIdAsync(
+        int postId, bool includeDetails = false,
+        CancellationToken cancellationToken = default);
+
+        Task<Post> CreateOrUpdatePostAsync(
+        Post post, IEnumerable<string> tags,
+        CancellationToken cancellationToken = default);
+
+
+        Task<Tag> GetTagAsync(
+        string slug, CancellationToken cancellationToken = default);
+
+
 	}
 }

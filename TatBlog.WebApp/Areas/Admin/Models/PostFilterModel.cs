@@ -8,7 +8,7 @@ namespace TatBlog.WebApp.Areas.Admin.Models
 	public class PostFilterModel
 	{
 		[DisplayName("Từ khóa")]
-		public string KeyWord { get; set; }
+		public string Keyword { get; set; }
 
 		[DisplayName("Tác giả")]
 		public int? AuthorId { get; set; }
@@ -17,10 +17,10 @@ namespace TatBlog.WebApp.Areas.Admin.Models
 		public int? CategoryId { get; set; }
 
 		[DisplayName("Năm")]
-		public int? Year { get; set; }
+		public int Year { get; set; }
 
 		[DisplayName("Tháng")]
-		public int? Mouth { get; set; }
+		public int Month { get; set; }
 
 		public IEnumerable<SelectListItem> AuthorList { get; set; }
 
