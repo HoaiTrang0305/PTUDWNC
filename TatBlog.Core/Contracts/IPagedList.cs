@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TatBlog.Core.Contracts
-{
+namespace TatBlog.Core.Contracts;  
     public interface IPagedList
     {
         //Tổng số trang (Số tập con)
@@ -39,4 +38,4 @@ namespace TatBlog.Core.Contracts
         //Đếm số lượng phần tử chứa trong trang
         int Count { get; }
     }
-}
+

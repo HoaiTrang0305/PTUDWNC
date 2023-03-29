@@ -19,7 +19,7 @@ namespace TatBlog.Core.Entities
         public string UrlSlug { get; set; }
 
         //Mô tả thêm về chuyên mục
-        public string Decsription { get; set; }
+        public string Description { get; set; }
 
         //Đánh dấu chuyên mục được hiển thị trên menu
         public bool ShowOnMenu { get; set; }

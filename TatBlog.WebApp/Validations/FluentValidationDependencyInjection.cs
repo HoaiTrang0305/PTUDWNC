@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace TatBlog.WebApp.Validations
 {
-	public class FluentValidationDependencyInjection
+	public static class FluentValidationDependencyInjection
 	{
 		public static WebApplicationBuilder ConfigureFluentValidation(
 			this WebApplicationBuilder builder)

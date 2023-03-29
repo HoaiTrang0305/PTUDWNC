@@ -32,7 +32,7 @@ namespace TatBlog.WebApp.Areas.Admin.Models
 
         public string Meta { get; set; }
         [DisplayName("Slug")]
-        [Remote("VerifyPostSlug","Post","Admin",
+        [Remote("VerifyPostSlug","Posts","Admin",
             HttpMethod="POST",AdditionalFields ="Id")]
        /* [Required(ErrorMessage = "URL slug không được để trống")]
         [MaxLength(200, ErrorMessage = "Slug tối đa 200 kí tự")]*/
@@ -53,7 +53,7 @@ namespace TatBlog.WebApp.Areas.Admin.Models
         public int CategoryId { get; set; }
         [DisplayName("Tác giả")]
        /* [Required(ErrorMessage = "Bạn chưa chọn tác giả")]*/
-        public int AuthodId { get; set; }
+        public int AuthorId { get; set; }
         [DisplayName("Từ khóa ( mỗi từ một dòng")]
         /*[Required(ErrorMessage = "Bạn chưa nhập tên thẻ")]*/
 

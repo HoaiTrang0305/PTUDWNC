@@ -11,21 +11,25 @@ namespace TatBlog.Data.Contexts
 {
     public class BlogDbContext:DbContext
     {
-        public DbSet<Author> Author { get; set; }
+        public DbSet<Author> Authors { get; set; }
 
-        public DbSet<Category> Category { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
-        public DbSet<Post> Post { get; set; }
+        public DbSet<Post> Posts { get; set; }
 
         public DbSet<Tag> Tags { get; set; }
         public BlogDbContext(DbContextOptions<BlogDbContext> options) : base(options) { }
+        public BlogDbContext()
+        {
+            
+        }
 
-        /*protected override void OnConfiguring(
+        protected override void OnConfiguring(
             DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=MSI\HOAITRANG;Database=TatBlog;
             Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=false;");
-        }*/
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

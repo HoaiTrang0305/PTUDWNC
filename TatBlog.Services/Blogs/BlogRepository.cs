@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using TatBlog.Core.Contracts;
 using TatBlog.Core.DTO;
@@ -97,7 +98,7 @@ namespace TatBlog.Services.Blogs
                             Id = x.Id,
                             Name = x.Name,
                             UrlSlug = x.UrlSlug,
-                            Description = x.Decsription,
+                            Description = x.Description,
                             ShowOnMenu = x.ShowOnMenu,
                             PostCount = x.Posts.Count(p => p.Published)
                         }).ToListAsync(cancellationToken);
@@ -112,7 +113,7 @@ namespace TatBlog.Services.Blogs
                         {
                             Id = x.Id,
                             Name = x.Name,
-                            Description = x.Decsription,
+                            Description = x.Description,
                             PostCount = x.Posts.Count(p => p.Published)
                         });
                     return await tagQuery
@@ -138,7 +139,7 @@ namespace TatBlog.Services.Blogs
                     Id=x.Id,
                     Name=x.Name,
                     UrlSlug=x.UrlSlug,
-                    Description=x.Decsription,
+                    Description=x.Description,
                     PostCount=x.Posts.Count(p => p.Published)
                 })
                 .ToListAsync(cancellationToken);
@@ -189,7 +190,7 @@ namespace TatBlog.Services.Blogs
             {
                 posts = posts.Where(x => x.Title.Contains(condition.Keyword) ||
                                          x.ShortDescription.Contains(condition.Keyword) ||
-                                         x.Decsription.Contains(condition.Keyword) ||
+                                         x.Description.Contains(condition.Keyword) ||
                                          x.Category.Name.Contains(condition.Keyword) ||
                                          x.Tags.Any(t => t.Name.Contains(condition.Keyword)));
             }
@@ -266,7 +267,7 @@ namespace TatBlog.Services.Blogs
 					Id = x.Id,
 					Name = x.Name,
 					UrlSlug = x.UrlSlug,
-					Description = x.Decsription,
+					Description = x.Description,
 					ShowOnMenu = x.ShowOnMenu,
 					PostCount = x.Posts.Count(p => p.Published)
 				})
@@ -306,7 +307,7 @@ namespace TatBlog.Services.Blogs
 				.Select(x => new
 				{
 					Name = x,
-					Slug = x.GenerateSlug()
+					Slug =GenerateSlug(x)
 				})
 				.GroupBy(x => x.Slug)
 				.ToDictionary(g => g.Key, g => g.First().Name);
@@ -319,7 +320,7 @@ namespace TatBlog.Services.Blogs
 				var tag = await GetTagAsync(kv.Key, cancellationToken) ?? new Tag()
 				{
 					Name = kv.Value,
-					Decsription = kv.Value,
+                    Description = kv.Value,
 					UrlSlug = kv.Key
 				};
 
@@ -337,12 +338,27 @@ namespace TatBlog.Services.Blogs
 
 			return post;
 		}
-
-	}
-	public async Task<Tag> GetTagAsync(
+		public async Task<Tag> GetTagAsync(
 		string slug, CancellationToken cancellationToken = default)
-	{
-		return await _context.Set<Tag>()
-			.FirstOrDefaultAsync(x => x.UrlSlug == slug, cancellationToken);
-	}
+		{
+			return await _context.Set<Tag>()
+				.FirstOrDefaultAsync(x => x.UrlSlug == slug, cancellationToken);
+		}
+
+        private static string GenerateSlug(string phrase)
+        {
+            var str = phrase.ToLowerInvariant().Trim();
+
+            str = Regex.Replace(str, @"[^a-z0-9\s-]", "");
+
+            str = Regex.Replace(str, @"\s+", "").Trim();
+
+            str = str.Substring(0, str.Length <= 50 ? str.Length : 50).Trim();
+
+            str = Regex.Replace(str, @"\s", "-");
+            return str;
+
+        }
+    }
+	
 }

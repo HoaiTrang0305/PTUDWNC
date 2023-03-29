@@ -21,7 +21,7 @@ namespace TatBlog.Data.Seeders
         {
             _dbContext.Database.EnsureCreated();
 
-            if (_dbContext.Post.Any()) return;
+            if (_dbContext.Posts.Any()) return;
 
             var authors = AddAuthor();
             var categories = AddCategory();
@@ -68,7 +68,7 @@ namespace TatBlog.Data.Seeders
                     JoinedDate=new DateTime(2020,12,15)
                 }
             };
-            _dbContext.Author.AddRange(authors);
+            _dbContext.Authors.AddRange(authors);
             _dbContext.SaveChanges();
 
             return authors;
@@ -78,7 +78,7 @@ namespace TatBlog.Data.Seeders
         {
             var categories = new List<Category>()
             {
-                new () {Name=".NET Core", Decsription=".NET Core", UrlSlug="",}
+                new () {Name=".NET Core", Description=".NET Core", UrlSlug="",}
             };
             _dbContext.AddRange(categories);
             _dbContext.SaveChanges();
@@ -91,11 +91,11 @@ namespace TatBlog.Data.Seeders
         {
             var tags = new List<Tag>()
            {
-               new() {Name="Google",Decsription="Google appication",UrlSlug="Google",Posts=new List<Post>(){ } },
-               new() {Name="MongoDB",Decsription="MongoDB",UrlSlug="MongoDB",Posts=new List<Post>(){ } },
-               new() {Name="Neurul Network",Decsription="Neurul Network",UrlSlug="",Posts=new List<Post>(){ } },
-               new() {Name="Razor page",Decsription="Razor page",UrlSlug="",Posts=new List<Post>(){ } },
-               new() {Name="Tailwind CSS",Decsription="Tailwind CSS",UrlSlug="",Posts=new List<Post>(){ } },
+               new() {Name="Google",Description="Google appication",UrlSlug="Google",Posts=new List<Post>(){ } },
+               new() {Name="MongoDB",Description="MongoDB",UrlSlug="MongoDB",Posts=new List<Post>(){ } },
+               new() {Name="Neurul Network",Description="Neurul Network",UrlSlug="",Posts=new List<Post>(){ } },
+               new() {Name="Razor page",Description="Razor page",UrlSlug="",Posts=new List<Post>(){ } },
+               new() {Name="Tailwind CSS",Description="Tailwind CSS",UrlSlug="",Posts=new List<Post>(){ } },
            };
             _dbContext.AddRange(tags);
             _dbContext.SaveChanges();
@@ -114,7 +114,7 @@ namespace TatBlog.Data.Seeders
                 {
                     Title = "ASP.NET Core Diagnostic Scenarios",
                     ShortDescription= "David and friends has a great repos ",
-                    Decsription = "Here's a few great DON'T and DO examples ",
+                    Description = "Here's a few great DON'T and DO examples ",
                     Meta = "David and friends has a great repository filled ",
                     UrlSlug = "aspnet - core - diagnostic - scenarios",
                     Published = true,
