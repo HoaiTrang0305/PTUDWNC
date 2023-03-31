@@ -69,6 +69,10 @@ namespace TatBlog.Services.Blogs
         Task<Tag> GetTagAsync(
         string slug, CancellationToken cancellationToken = default);
 
+        Task<IPagedList<T>> GetPagedPostsAsync<T>(
+        PostQuery condition,
+        IPagingParams pagingParams,
+        Func<IQueryable<Post>, IQueryable<T>> mapper);
 
-	}
+    }
 }
